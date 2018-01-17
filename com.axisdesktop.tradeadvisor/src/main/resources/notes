@@ -1,0 +1,1 @@
+create table poloniex_data_d1( date int,  high decimal, low decimal, open decimal, close decimal, volume decimal, quote_volume decimal, weighted_average decimal)

@@ -1,0 +1,3 @@
+spring.datasource.url=jdbc:h2:~/tradeadvisor.h2db/tradeadvisor
+spring.datasource.username=admin
+spring.datasource.password=jijiji

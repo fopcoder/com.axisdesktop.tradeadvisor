@@ -13,16 +13,25 @@ public class PoloniexDataD1 {
 	@Id
 	private int date;
 
+	@Column( precision=8, scale=8 )
 	private BigDecimal high;
+	
+	@Column( precision=8, scale=8 )
 	private BigDecimal low;
+	
+	@Column( precision=8, scale=8 )
 	private BigDecimal open;
+	
+	@Column( precision=8, scale=8 )
 	private BigDecimal close;
+	
+	@Column( precision=8, scale=8 )
 	private BigDecimal volume;
 
-	@Column( name = "quote_volume" )
+	@Column( name = "quote_volume", precision=8, scale=8 )
 	private BigDecimal quoteVolume;
 
-	@Column( name = "weighted_average" )
+	@Column( name = "weighted_average", precision=8, scale=8 )
 	private BigDecimal weighted_average;
 
 	public int getDate() {

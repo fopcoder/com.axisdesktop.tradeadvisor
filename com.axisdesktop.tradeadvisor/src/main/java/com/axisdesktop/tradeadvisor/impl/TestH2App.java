@@ -12,7 +12,7 @@ public class TestH2App {
 		// TODO Auto-generated method stub
 
 		Class.forName( "org.h2.Driver" );
-		Connection conn = DriverManager.getConnection( "jdbc:h2:~/tradeadvisor.h2db/tradeadvisor", "root", "123" );
+		Connection conn = DriverManager.getConnection( "jdbc:h2:~/tradeadvisor.h2db/tradeadvisor", "admin", "123" );
 		// add application code here
 		conn.close();
 

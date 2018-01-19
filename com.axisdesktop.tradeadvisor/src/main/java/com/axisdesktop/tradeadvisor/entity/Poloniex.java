@@ -4,12 +4,12 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table( name = "poloniex_data_d1" )
-public class PoloniexDataD1 extends PoloniexData {
+@Table( name = "poloniex" )
+public class Poloniex extends Stock {
 
 	@Override
 	public String toString() {
-		return "PoloniexDataD1 " + super.toString();
+		return "Poloniex" + super.toString();
 	}
 
 }

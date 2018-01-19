@@ -5,8 +5,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class Controller {
-	@RequestMapping("/")
-    public String home(){
-        return "Hello World!";
-    }
+	@RequestMapping( "/" )
+	public String home() {
+		return "Hello World!";
+	}
+
+	@RequestMapping( "/poloniex" )
+	public String poloniex() {
+		return "Hello Polo!";
+	}
 }

@@ -1,5 +1,8 @@
-spring.datasource.url=jdbc:h2:~/tradeadvisor.h2db/tradeadvisor
+spring.datasource.url=jdbc:h2:~/kokoko.h2db/kokoko
 spring.datasource.username=admin
 spring.datasource.password=jijiji
 
 spring.jpa.hibernate.ddl-auto=none
+
+poloniex_key=123
+poloniex.secret=456

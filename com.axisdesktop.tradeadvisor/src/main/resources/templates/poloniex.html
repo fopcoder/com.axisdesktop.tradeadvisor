@@ -1,0 +1,52 @@
+<html>
+<body>
+<head>
+<script src="/res/jquery-3.2.1.min.js"></script>
+<script src="/res/jquery-3.2.1.min.js"></script>
+<script src="/res/stock/highstock.js"></script>
+<script src="/res/stock/modules/exporting.js"></script>
+<script src="/res/stock/indicators/indicators.js"></script>
+<script src="/res/stock/indicators/bollinger-bands.js"></script>
+</head>
+<h1>PLONIEX ->?</h1>
+<div id="container" style="height: 400px; width: 310px"></div>
+
+
+<script type="text/javascript">
+
+$.getJSON('/poloniex/rest', function (data) {
+
+    // create the chart
+    Highcharts.stockChart('container', {
+
+
+        title: {
+            text: 'AAPL stock price by minute'
+        },
+
+        rangeSelector: {
+            selected: 2
+        },
+        
+        series: [{
+            name: 'AAPL',
+            type: 'candlestick',
+            data: data,
+            id: 'koko',
+            tooltip: {
+                valueDecimals: 2
+            }
+        },{
+            type: 'bb',
+            linkedTo: 'koko',
+            params:{ period: 19 },
+            name: 'jijiji'
+        }]
+    });
+});
+
+		</script>
+
+
+</body>
+</html>

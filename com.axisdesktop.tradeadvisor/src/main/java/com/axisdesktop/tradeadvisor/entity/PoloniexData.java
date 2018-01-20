@@ -12,34 +12,34 @@ import javax.persistence.MappedSuperclass;
 @MappedSuperclass
 public class PoloniexData {
 	@Id
-	private int date;
+	private long date;
 
-	@Column( precision = 8, scale = 8 )
+	@Column( precision = 16, scale = 8 )
 	private BigDecimal high;
 
-	@Column( precision = 8, scale = 8 )
+	@Column( precision = 16, scale = 8 )
 	private BigDecimal low;
 
-	@Column( precision = 8, scale = 8 )
+	@Column( precision = 16, scale = 8 )
 	private BigDecimal open;
 
-	@Column( precision = 8, scale = 8 )
+	@Column( precision = 16, scale = 8 )
 	private BigDecimal close;
 
-	@Column( precision = 8, scale = 8 )
+	@Column( precision = 20, scale = 8 )
 	private BigDecimal volume;
 
-	@Column( name = "quote_volume", precision = 8, scale = 8 )
+	@Column( name = "quote_volume", precision = 20, scale = 8 )
 	private BigDecimal quoteVolume;
 
-	@Column( name = "weighted_average", precision = 8, scale = 8 )
-	private BigDecimal weighted_average;
+	@Column( name = "weighted_average", precision = 16, scale = 8 )
+	private BigDecimal weightedAverage;
 
-	public int getDate() {
+	public long getDate() {
 		return date;
 	}
 
-	public void setDate( int date ) {
+	public void setDate( long date ) {
 		this.date = date;
 	}
 
@@ -91,19 +91,18 @@ public class PoloniexData {
 		this.quoteVolume = quoteVolume;
 	}
 
-	public BigDecimal getWeighted_average() {
-		return weighted_average;
+	public BigDecimal getWeightedAverage() {
+		return weightedAverage;
 	}
 
-	public void setWeighted_average( BigDecimal weighted_average ) {
-		this.weighted_average = weighted_average;
+	public void setWeightedAverage( BigDecimal weighted_average ) {
+		this.weightedAverage = weighted_average;
 	}
 
 	@Override
 	public String toString() {
 		return " [date=" + date + ", high=" + high + ", low=" + low + ", open=" + open + ", close=" + close
-				+ ", volume=" + volume + ", quoteVolume=" + quoteVolume + ", weighted_average=" + weighted_average
-				+ "]";
+				+ ", volume=" + volume + ", quoteVolume=" + quoteVolume + ", weighted_average=" + weightedAverage + "]";
 	}
 
 	public String convertTimestamp( long timestamp ) {
